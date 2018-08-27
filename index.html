@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Three column Layout</title>
+  <meta charset="utf-8">
+  <link href="style.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="style.css" type="text/css" rel="stylesheet" media="print">
+  <meta name="viewport" content="width==device-width, initial-scale=1.0">
+  <!--viewport meta tag helps with displays on mobile devices-->
+</head>
+<body>
+  <!--Always wrap in a container-->
+  <div id="container">
+    <header class="box">
+      <!--Create the heading-->
+      <span><a href="#content"> Skip to content</a></span>
+      <!--above we put the fragment identifier-->
+      <h1>This is Page Heading</h1>
+    </header>
+    <div id="container-1">
+    <!--nav bar to the left-->
+      <nav class="box-1">
+        <!--navigation bar in an unordered list-->
+        <ul>
+          <li><a href="#">First</a></li>
+          <li><a href="#">Second</a></li>
+          <li><a href="#">Third</a></li>
+          <li><a href="#">Fourth</a></li>
+        </ul>
+        <!--Place an image tag after the navigation links-->
+        <!--picture element to provide a method for a browser to display different images depending on specific criteria-->
+        <picture>
+          <source media="(min-width: 1200px)" srcset="large.jpg">
+          <source media="(min-width: 800px)" srcset="medium.jpg">
+          <source media="(min-width: 320px)" srcset="small.jpg">
+          <img src="img/something.jpg" width="100" height="100" alt="nav image" title="nav image">
+        </picture>
+      </nav>
+      <!-- for Flex box order does not matter-->
+      <main class="box-2">
+        <h2>This is the First main content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, maiores libero lorem ipsum lorem ipsum loestiae consectetur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dolore, sint incidunt exercitationem quamllat qui nisi harum quibusdam sed ab consequuntur velit nostrum doloremque neque?</p>
+        <img srx="img/" alt="First main" title="First Main" class="floatright">
+        <h3>Lorem ipsum dolor sit amet, consectetur <br> cessitatibus, velit odit harum officiis dignissimos.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt sed nostrum impedit non quam adipisci placeat omnis fugit, illo asperiores natus animi, architecto quisquam accusantium iusto ipsam. Fugiat, dignissimos, vitae.</p>
+        <h3>Lorem ipsum dolor sit amet, consectetur <br> cessitatibus, velit odit harum officiis dignissimos.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt sed nostrum impedit non quam adipisci placeat omnis fugit, illo asperiores natus animi, architecto quisquam accusantium iusto ipsam. Fugiat, dignissimos, vitae.</p>
+        <h3>Lorem ipsum dolor sit amet, consectetur <br> cessitatibus, velit odit harum officiis dignissimos.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt sed nostrum impedit non quam adipisci placeat omnis fugit, illo asperiores natus animi, architecto quisquam accusantium iusto ipsam. Fugiat, dignissimos, vitae.</p>
+
+      </main>
+
+
+      <!-- start the side bar to the right-->
+      <aside class="box-3">
+        <h3>The First Aside</h3>
+        <p class="news">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis,  aliquam, magni id beatae commodi sequi autem quia assumenda.
+          <a href="www.youtube.com" target="_blank">The first link</a>
+        </p>
+        <br>
+        <h3>The Second Aside</h3>
+        <p class="news">
+          <a href="www.youtube.com" target="_blank">The second link</a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis,  aliquam, magni id beatae commodi sequi autem quia assumenda.
+
+        </p>
+      </aside>
+    </div>
+
+    <!-- note that the footer is actually put inside the main tag-->
+    <footer> Copyright &copy; 2018 Three page layout <br> </footer>
+
+  </div>
+</body>
+</html>

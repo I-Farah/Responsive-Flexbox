@@ -1,0 +1,124 @@
+/*
+flex container with a horizontal
+flexible direction
+#id {
+  display: flex;
+  flex-direction: row;
+}
+nav{ flex: 1;}
+main{ flex: 7;}
+aside{ flex: 2;}
+
+-------------------------------
+single column
+nav links set to horitontal displays
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav ul{
+  to display items in container on more than one line nav links will continue on next line
+  flex-wrap: wrap;
+}
+
+flex property to customize the size of each flex item- items should add up to 10
+order property to display the items in a different order than coded
+default is 0, to display element before - set value to -1, display after set to 1,
+main axis - the x axis
+cross-axis is the y axis
+flex item- nav, or main , or Aside
+cross-size - the y axis of items
+main-size - the x axis of items
+flex-direction: row or column, column for single column display for tablet or phone
+flex-wrap- wrap| nowrap| wrapreverse
+flex-basis- <length> width for items
+justify-content: flex-start| flex-end| center -
+align-self: flex-start| flex-end| center - align on x asis
+align-content: flex-start| flex-end| center - align on y
+flex-grow: <number>
+flex-shrink: <number>
+flex: <integer>
+order: <integer>
+
+*/
+body{
+  background-color: rgb(120, 157, 180);
+}
+header{
+  flex-direction: column;
+  height: 130px;
+  background-color: rgb(44, 83, 88);
+  color:  rgb(120, 157, 180);
+  text-align: center;
+}
+#container-1{
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+}
+
+.box-1{
+  border: 1px solid gray;
+  flex: 2;
+  justify-content: center;
+  background-color: rgb(44, 83, 88);
+  padding: 20px;
+  order: -1;
+}
+nav ul li{
+  list-style-type: none;
+}
+nav ul li a{
+  text-decoration: none;
+  color: rgb(120, 157, 180);
+}
+nav ul li a:hover{
+  color: rgb(105, 175, 200);
+}
+nav ul li a:visited{
+  color: rgb(181, 75, 52);
+}
+
+.box-2{
+  border: 1px solid gray;
+  flex: 6;
+  padding: 20px;
+  order: 0;
+}
+.box-3{
+  border: 1px solid gray;
+  flex: 2;
+  padding: 20px;
+  order: 1;
+}
+footer{
+  color: gray;
+  font-size: 60%;
+  background-color:  rgb(44, 83, 88);
+}
+
+/*media queries for smartphones*/
+@media only all and (max-width: 768px){
+  #container-1{
+
+    flex-direction: column;
+  }
+
+  nav img{
+    display: none;
+  }
+  
+  nav ul li a{
+    border: 1px solid gray;
+
+    padding: 10px;
+    text-align: center;
+    display: block;
+    background-color: rgb(45, 68, 73);
+    margin: 0 5px 0 0px;
+  }
+  aside{
+    display: none;
+  }
+}
